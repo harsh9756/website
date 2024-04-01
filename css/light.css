@@ -1,60 +1,22 @@
 html,
 body {
     overflow-x: hidden;
-    background-image: url('https://c4.wallpaperflare.com/wallpaper/569/127/686/gray-texture-wallpaper-preview.jpg');
+    background-image: url('../images/bg-light.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     background-repeat: no-repeat;
 }
+
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
-.navbar-brand{
+
+.navbar-brand {
     color: black;
 }
-.links {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    position: fixed;
-    top: 50%;
-    right: 0;
-    z-index: 1;
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
-    transition: all 0.3s ease-in-out;
-}
-
-.links {
-    padding-left: 10px;
-    display: flex;
-    justify-content: space-around;
-    flex-direction: row;
-    align-items: center;
-    background-color: rgb(0, 0, 0);
-    width: 200px;
-    height: 50px;
-    border-radius: 20px 0px 0px 20px;
-    position: fixed;
-    top: 300px;
-    right: -160px;
-    z-index: 1;
-    color: #46AAAA;
-    font-size: 16px;
-    transition: right 0.9s ease-in-out;
-}
-
-.links:hover {
-    right: 0px;
-}
-
 
 .home {
     background-color: rgb(0, 0, 0);
@@ -69,7 +31,11 @@ body {
     bottom: 20px;
 }
 
-.about , .services , .Portfolio , .contact{
+.about,
+.services,
+.Portfolio,
+.main,
+.contact {
     border: 1px solid rgb(14, 0, 0);
     border-radius: 9px;
     margin: 10px;
@@ -102,6 +68,12 @@ body {
     background-color: black;
 }
 
+.fadedbg {
+    background-color: rgba(0, 0, 0, 0.267);
+    padding: 0px 8px 0px 5px;
+    border-radius: 5px;
+}
+
 .navbar-brand {
     font-size: 1.5rem !important;
     margin-left: 15px;
@@ -109,17 +81,9 @@ body {
     font-weight: 600;
     text-decoration: none;
 }
-
-.main {
-    background-size: cover !important;
-    width: 100% !important;
-    height: 100vh;
-}
-
-.main h3 {
-    font-size: 4.4rem;
-    font-weight: 700;
-    color: white;
+.main p{
+    color: rgb(255, 255, 255);
+    font-size: 20px;
 }
 
 .main h4 {
@@ -128,38 +92,54 @@ body {
     line-height: 1;
 }
 
-.main .bt1 {
-    height: 55px;
-    width: 138px;
-    color: white;
-    outline: none;
+.main svg{
+    transition: transform 0.3s ease;
+    border-radius: 9px;
+    box-shadow: 0px 0px 10px #1FFFD6;
+}
+.main svg:hover{
+    transform: scale(1.1);
+}
+svg:hover > g > g{
+    fill: rgb(0, 0, 0);
+}
+
+
+ .Portfolio .bt1,.bt2 {
+    height: 40px ;
+    width: 80px ;
+    margin-bottom: 5px !important;
+    margin: auto;
     border: none;
     font-weight: bold;
-    background-color: rgb(202, 18, 95);
+    background-color: #000000;
+    color: #ffffff;
     border-radius: 5px;
+    transition: all 0.3s ease;
 }
 
-.main .bt1:hover {
-    background-color: rgb(233, 20, 109);
-    transition: 0.5sec;
-    color: black;
+.Portfolio .bt1:hover,.bt2:hover {
+    background-color: rgb(13, 134, 120);
+    box-shadow: 0px 0px 7px rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
 }
 
-.main .bt2 {
-    height: 55px;
-    width: 138px;
-    background-color: transparent;
-    color: white;
-    outline: none;
-    border: 1px solid black;
+/* .Portfolio .bt2 {
+    height: 40px;
+    width: 100px;
+    margin-bottom: 5px !important;
+    border: none;
+    margin: auto;
+    background-color: #83ebba;
+    color: rgb(0, 0, 0);
     font-weight: bold;
     border-radius: 5px;
 }
 
-.main .bt2:hover {
-    background-color: white;
-    color: rgb(0, 0, 0);
-}
+.Portfolio .bt2:hover {
+    background-color: black;
+    color:white;
+} */
 
 .aboutimg {
     -webkit-box-shadow: 9px 9px 21px -10px rgba(0, 0, 0, 0.75);
@@ -173,8 +153,10 @@ body {
     font-weight: bold !important;
 }
 
-h1{
+h1 {
     font-size: 3rem !important;
+    color: white !important;
+    text-shadow: 0px 0px 5px black;
     font-weight: 700 !important;
 }
 
@@ -272,18 +254,36 @@ h1{
         width: 95%;
     }
 }
+.card-title{
+    text-decoration: underline;
+    font-size: x-large;
+}
 
-.hcard {
+.card {
     border: none;
+    background-color: #ffffff !important;
     outline: none;
-
 }
 
-.card p {
-    color: gray;
+.card h5 {
+    color: rgb(0, 0, 0);
 }
 
 
+
+.card:hover {
+    -webkit-box-shadow: 0px 0px 42px -9px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 42px -9px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 42px -9px rgba(0, 0, 0, 0.75);
+    transition: 0.5s;
+    
+}
+
+.card:hover .circle {
+    color: black;
+    background-color: rgb(40, 236, 190);
+    transition: 0.5s;
+}
 .circle {
     height: 70px;
     width: 70px;
@@ -296,23 +296,9 @@ h1{
     margin-bottom: 20px;
 }
 
-.card:hover {
-    -webkit-box-shadow: 0px 0px 42px -9px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 0px 0px 42px -9px rgba(0, 0, 0, 0.75);
-    box-shadow: 0px 0px 42px -9px rgba(0, 0, 0, 0.75);
-    transition: 0.5s;
-
-}
-
-.card:hover .circle {
-    background-color: black;
-    color: rgb(147, 18, 18);
-    transition: 0.5s;
-}
-
 .circle:hover {
-    background-color: black;
-    color: white;
+    color: black;
+    background-color: rgb(40, 236, 190);
     transition: 0.5s;
 }
 
@@ -350,62 +336,72 @@ h1{
 
 
 label {
-    width:55px;
-    height:30px;
+    width: 55px;
+    height: 30px;
     position: relative;
     display: block;
     background: #ffffff;
     border-radius: 200px;
-    box-shadow: inset 0px 5px 15px rgba(0,0,0,0.4), inset 0px -5px 15px rgba(255,255,255,0.4);
+    box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.4), inset 0px -5px 15px rgba(255, 255, 255, 0.4);
     cursor: pointer;
-  }
-  
-  label:after {
+}
+
+label:after {
     content: "";
-    width:23px;
+    width: 23px;
     height: 23px;
     position: absolute;
-    top:4px;
-    left:3px;
-    background: linear-gradient(180deg,#ffcc89,#d8860b);
+    top: 4px;
+    left: 3px;
+    background: linear-gradient(180deg, #ffcc89, #d8860b);
     border-radius: 180px;
-    box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
-  }
-  input[type='checkbox'] {
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+input[type='checkbox'] {
     width: 0;
     height: 0;
     visibility: hidden;
-  }
-  input:checked + label {
+}
+
+input:checked+label {
     background: #242424;
-  }
-  input:checked + label:after {
-    left:51px;
+}
+
+input:checked+label:after {
+    left: 51px;
     transform: translateX(-100%);
-    background: linear-gradient(180deg,#777,#3a3a3a);
-  }
-  label, label:after {
+    background: linear-gradient(180deg, #777, #3a3a3a);
+}
+
+label,
+label:after {
     transition: 0.3s
-  }
-  label svg {
+}
+
+label svg {
     position: absolute;
-    width:23px;
-    top:4px;
+    width: 23px;
+    top: 4px;
     z-index: 100;
-  }
-  label svg.sun {
-    left:3px;
-    fill:#fff;
+}
+
+label svg.sun {
+    left: 3px;
+    fill: #fff;
     transition: 0.3s;
-  }
-  label svg.moon {
-    left:28px;
-    fill:#7e7e7e;
+}
+
+label svg.moon {
+    left: 28px;
+    fill: #7e7e7e;
     transition: 0.3s;
-  }
-  input:checked + label svg.sun {
-    fill:#7e7e7e;
-  }
-  input:checked + label svg.moon {
-    fill:#fff;
-  }
+}
+
+input:checked+label svg.sun {
+    fill: #7e7e7e;
+}
+
+input:checked+label svg.moon {
+    fill: #fff;
+}
