@@ -129,7 +129,7 @@ svg:hover > g > g{
 
 .about p,
 h3 {
-    color: white !important;
+    color: rgb(0, 0, 0) !important;
 }
 
 .progress {
