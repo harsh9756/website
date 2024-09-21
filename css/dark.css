@@ -24,8 +24,8 @@ body {
     overflow: hidden;
     box-shadow: 5px 0px 10px rgb(238, 68, 250), 
                 -5px 0px 10px rgb(0, 175, 215),
-                0px -5px 10px rgb(255, 255, 255),
-                0px 5px 10px rgb(255, 255, 255);
+                0px -5px 10px rgb(0, 175, 215),
+                0px 5px 10px rgb(238, 68, 255);
     position: relative;
   }
   
