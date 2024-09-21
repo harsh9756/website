@@ -16,7 +16,38 @@ body {
 .navbar-brand {
     color: white !important;
 }
-
+.image-box {
+    animation: spin 4s linear infinite;
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    box-shadow: 5px 0px 10px rgb(238, 68, 250), 
+                -5px 0px 10px rgb(0, 175, 215),
+                0px -5px 10px rgb(255, 255, 255),
+                0px 5px 10px rgb(255, 255, 255);
+    position: relative;
+  }
+  
+  @keyframes spin {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .image-box img {
+    width: 100%;  /* Make the image fit the width of the .image-box */
+    height: 100%; /* Make the image fit the height of the .image-box */
+    object-fit: cover; /* Ensures the image covers the entire area without distortion */
+    animation: counter-spin 4s linear infinite;
+  }
+  
+  @keyframes counter-spin {
+    100% {
+      transform: rotate(-360deg);
+    }
+  }
+  
 .home {
     background-color: rgb(255, 255, 255);
     display: flex;
@@ -85,7 +116,7 @@ body {
 .main svg{
     transition: transform 0.3s ease;
     border-radius: 9px;
-    box-shadow: 0px 0px 10px #1FFFD6;
+    box-shadow: 0px 0px 10px #b3b5b4;
 }
 svg:hover{
     transform: scale(1.1);
@@ -132,100 +163,6 @@ h3 {
     color: rgb(0, 0, 0) !important;
 }
 
-.progress {
-    font-size: 1rem !important;
-    height: 20px !important;
-}
-
-.progress-bar {
-    animation: progress-animation 2s ease-in-out forwards;
-}
-
-@keyframes progress-animation {
-    from {
-        width: 0;
-    }
-
-    to {
-        width: 100%;
-    }
-}
-
-.progress-bar4 {
-    animation: progress-animation4 2s ease-in-out forwards;
-}
-
-@keyframes progress-animation4 {
-    from {
-        width: 0;
-    }
-
-    to {
-        width: 95%;
-    }
-}
-
-.progress-bar2 {
-    animation: progress-animation2 2s ease-in-out forwards;
-}
-
-@keyframes progress-animation2 {
-    from {
-        width: 0;
-    }
-
-    to {
-        width: 80%;
-    }
-}
-
-.progress-bar3 {
-    animation: progress-animation3 2s ease-in-out forwards;
-}
-
-@keyframes progress-animation3 {
-    from {
-        width: 0;
-    }
-
-    to {
-        width: 100%;
-    }
-}
-
-.progress-bar5 {
-    animation: progress-animation5 2s ease-in-out forwards;
-}
-
-.ss {
-    color: rgb(233, 20, 109);
-    border-bottom: 1px solid black;
-}
-
-@keyframes progress-animation5 {
-    from {
-        width: 0;
-    }
-
-    to {
-        width: 100%;
-    }
-}
-
-.progress-bar6 {
-    background-color: rgb(233, 20, 109);
-    animation: progress-animation6 2s ease-in-out forwards;
-}
-
-@keyframes progress-animation6 {
-    from {
-        width: 0;
-    }
-
-    to {
-        width: 95%;
-    }
-}
 #git{
     background-color: white;
     border-radius: 50%;
