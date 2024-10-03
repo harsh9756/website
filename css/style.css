@@ -266,11 +266,8 @@ ul li a {
     color: white !important;
     text-decoration: none;
     text-transform: uppercase;
-    -webkit-text-stroke: 1px rgba(0, 0, 0, 0.468);
     position: relative;
-    /* Ensure the link is positioned correctly */
     display: block;
-    /* Makes the anchor tag fill the li */
 }
 
 ul li a::before {
@@ -288,7 +285,6 @@ ul li a::before {
 
 ul li a:hover::before {
     width: 100%;
-    /* Fill the parent li on hover */
     filter: drop-shadow(0 0 25px var(--clr));
 }
 
