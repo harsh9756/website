@@ -328,7 +328,7 @@ ul li a:hover::before {
     border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.18);
     margin: auto;
-    padding: 3rem !important;
+    padding: 3rem 1rem !important;
 }
 
 .contact__form-label {
