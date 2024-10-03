@@ -227,14 +227,15 @@ h1 {
 }
 
 
-.about a,
-strong {
+.about strong {
     text-decoration: none;
-    color: cyan;
+    color: rgba(0, 255, 255, 0.879);
 }
 
 .about div div a {
     text-decoration: none;
+    font-weight: 700;
+    text-decoration: underline;
     color: rgb(242, 141, 158);
 }
 
