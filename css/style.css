@@ -8,6 +8,11 @@ body {
     background-attachment: fixed;
 }
 
+hr{
+    margin: 0 !important;
+    padding: 0 !important;
+    color: white !important;
+}
 .ff {
     font-family: 'Handjet', sans-serif !important;
     color: cyan !important;
