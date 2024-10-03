@@ -1,0 +1,374 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&family=Handjet:wght@400;700&display=swap');
+
+html,
+body {
+    background-image: linear-gradient(to top left, #353a3a, #001515);
+    overflow-x: hidden;
+    background-position: fixed;
+    background-attachment: fixed;
+}
+
+.ff {
+    font-family: 'Handjet', sans-serif !important;
+    color: cyan !important;
+    filter: drop-shadow(0px 0px 10px cyan);
+}
+
+.glowing-cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 70px !important;
+    height: 70px !important;
+    background-color: rgba(82, 235, 255, 0) !important;
+    /* White glowing color */
+    border-radius: 50% !important;
+    /* Makes the cursor round */
+    pointer-events: none !important;
+    /* Prevents the cursor from blocking interactions */
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.5) !important;
+    transform: translate(-50%, -50%) !important;
+    z-index: 10000 !important;
+    transition: transform 0.05s ease-out;
+}
+
+* {
+    padding: 0;
+    cursor: none;
+    margin: 0;
+}
+
+section {
+    min-height: 95vh;
+}
+
+.navbar {
+    background-color: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(50px) !important;
+}
+
+.nav-link {
+    color: white !important;
+    font-size: 1rem;
+    cursor: none;
+    text-decoration: none;
+
+}
+
+.nav-link:hover {
+    border-radius: 0% !important;
+    color: #00b3aa !important;
+    border-bottom: 2px solid#00b3aa;
+}
+
+.navbar-brand {
+    font-size: 1.5rem !important;
+    margin-left: 15px;
+    font-weight: 600;
+    color: white !important;
+    text-decoration: none;
+}
+
+.navbar-brand:hover {
+    border-bottom: 2px solid white;
+}
+
+.image-box {
+    animation: spin 5s linear infinite;
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    box-shadow: 5px 0px 20px rgb(25, 197, 219),
+        /* Light cyan */
+        -5px 0px 20px rgb(204, 37, 151),
+        /* Light purple */
+        0px -5px 20px rgb(204, 37, 151),
+        /* Light purple */
+        0px 5px 20px rgb(25, 197, 219);
+    /* Light cyan */
+
+    position: relative;
+}
+
+.image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    animation: counter-spin 5s linear infinite;
+}
+
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg) translateY(0px);
+    }
+
+    50% {
+        transform: rotate(180deg) translateY(15px);
+    }
+
+    100% {
+        transform: rotate(360deg) translateY(0px);
+    }
+}
+
+.heading {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.heading::before {
+    content: "x--------x";
+    position: absolute;
+    left: 50%;
+    bottom: -20px;
+    transform: translate(-50%);
+    border-radius: 5px;
+    animation: grow 1s linear infinite alternate;
+}
+
+@keyframes grow {
+    0% {
+        opacity: .2;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+
+@keyframes counter-spin {
+    100% {
+        transform: rotate(-360deg);
+        /* Full counter-clockwise rotation */
+    }
+}
+
+
+.main svg {
+    transition: transform 0.3s ease;
+    border-radius: 9px;
+    margin: auto;
+    box-shadow: 0px 0px 10px #a4a4a4b5;
+}
+
+svg:hover {
+    transform: scale(1.1);
+}
+
+svg:hover>g>g {
+    fill: rgb(53, 255, 248);
+}
+
+.skills {
+    padding: 6px 15px 4px 15px;
+    font-size: 1rem;
+    display: inline-block;
+    background: rgba(0, 255, 255, 0.553);
+    border-radius: 5px;
+    font-weight: 600;
+    transition: all .3s;
+    color: #000000
+}
+
+.skills:hover {
+    color: white;
+    scale: 1.1;
+    box-shadow: 0 0 20px cyan;
+}
+
+.about h3 {
+    display: inline-block;
+    color: rgb(242, 141, 158) !important;
+}
+
+.about h3:hover {
+    filter: drop-shadow(0 0 15px pink);
+}
+
+#projects h3 {
+    color: palevioletred;
+}
+
+#projects strong {
+    color: rgb(29, 158, 158);
+}
+
+#git {
+    background-color: white;
+    border-radius: 50%;
+    padding: 0px 0px 2px;
+    margin: 0;
+}
+
+#boot {
+    background-color: white;
+    border-radius: 8px;
+    padding: 0;
+    margin: 0;
+}
+
+h2 {
+    color: rgb(180, 180, 180) !important;
+}
+
+
+h1 {
+    font-size: 3rem !important;
+    color: rgb(255, 255, 255) !important;
+}
+
+
+.about a,
+strong {
+    text-decoration: none;
+    color: cyan;
+}
+
+.about div div a {
+    text-decoration: none;
+    color: rgb(242, 141, 158);
+}
+
+.about div div a:hover {
+    color: rgb(242, 141, 158);
+    filter: drop-shadow(0 0 5px rgb(242, 141, 158));
+}
+
+.about button {
+    padding: 5px 10px;
+    border: none;
+    color: white;
+    background-color: black;
+    transition: all 0.3s;
+    box-shadow: 4px 4px 0px cyan,
+        -4px -4px 0px pink;
+}
+
+.about button:hover {
+    scale: 1.05;
+    box-shadow: 6px 6px 0px cyan,
+        -6px -6px pink;
+}
+
+ul li {
+    display: inline-block;
+    list-style: none;
+}
+
+ul li a {
+    font-size: 2.5em;
+    letter-spacing: 2px;
+    color: white !important;
+    text-decoration: none;
+    text-transform: uppercase;
+    -webkit-text-stroke: 1px rgba(0, 0, 0, 0.468);
+    position: relative;
+    /* Ensure the link is positioned correctly */
+    display: block;
+    /* Makes the anchor tag fill the li */
+}
+
+ul li a::before {
+    content: attr(data-text);
+    position: absolute;
+    color: var(--clr);
+    width: 0;
+    overflow: hidden;
+    transition: width 1.5s;
+    border-right: 8px solid var(--clr);
+    -webkit-text-stroke: 1px var(--clr);
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+ul li a:hover::before {
+    width: 100%;
+    /* Fill the parent li on hover */
+    filter: drop-shadow(0 0 25px var(--clr));
+}
+
+.proj-img {
+    box-shadow: 2px 2px 10px white;
+    width: 100%;
+    height: 240px;
+    border-radius: 5px;
+}
+
+.hovv {
+    display: inline;
+    padding: auto;
+    margin: 0px 3px;
+    position: relative;
+    /* For absolute positioning of the span */
+}
+
+.hovv span {
+    margin: auto;
+    position: absolute;
+    background-color: var(--bgc);
+    color: var(--clrr);
+    padding: 5px;
+    border-radius: 5px;
+    z-index: 1000;
+    transition: all .5s ease;
+    opacity: 0;
+}
+
+.hovv:hover span {
+    transform: translateY(-35px);
+    opacity: 1;
+}
+
+.form-container {
+    background: rgba(255, 255, 255, 0.129);
+    box-shadow: 5px 5px 16px rgb(0, 29, 30);
+    backdrop-filter: blur(4.5px);
+    -webkit-backdrop-filter: blur(4.5px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    margin: auto;
+    padding: 3rem !important;
+}
+
+.contact__form-label {
+    color: #ffffff;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    display: block;
+    text-align: left;
+}
+
+.contact__form-input {
+    color: #333;
+    padding: 1rem;
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    letter-spacing: 0px;
+    background: #d8d8d8;
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+.btn-submit {
+    border: none;
+    background-color: cyan;
+    color: rgb(0, 0, 0);
+    border-radius: 5px;
+    font-weight: 600;
+    transition: all 0.3s;
+    margin-top: 10px;
+}
+
+.btn-submit:hover {
+    box-shadow: 3px 3px 0px rgb(255, 255, 255),
+        6px 6px 0px cyan;
+}
