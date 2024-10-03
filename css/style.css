@@ -2,7 +2,7 @@
 
 html,
 body {
-    background-image: linear-gradient(to top left, #353a3a, #001515);
+    background-image: linear-gradient(to top left, #353a3a, #012828);
     overflow-x: hidden;
     background-position: fixed;
     background-attachment: fixed;
@@ -70,13 +70,11 @@ section {
     font-size: 1.5rem !important;
     margin-left: 15px;
     font-weight: 600;
-    color: white !important;
+    filter: drop-shadow(0 0 10px cyan);
+    color: cyan !important;
     text-decoration: none;
 }
 
-.navbar-brand:hover {
-    border-bottom: 2px solid white;
-}
 
 .image-box {
     animation: spin 5s linear infinite;
@@ -158,15 +156,16 @@ section {
     transition: transform 0.3s ease;
     border-radius: 9px;
     margin: auto;
-    box-shadow: 0px 0px 10px #a4a4a4b5;
+    box-shadow: 1px 1px 3px rgb(253, 253, 253);
 }
 
 svg:hover {
     transform: scale(1.1);
+    box-shadow: 2px 2px 6px cyan;
 }
 
 svg:hover>g>g {
-    fill: rgb(53, 255, 248);
+    fill: cyan;
 }
 
 .skills {
